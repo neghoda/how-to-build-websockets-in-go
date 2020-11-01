@@ -154,11 +154,13 @@ Server side:
     }
 ```
 ### What WebSockets are
-The WebSocket communication protocol provides a full-duplex communication channel over a single TCP connection. In contrast to HTTPs, WebSockets don’t require you to send a request in order to get a &nbsp;response. They allow for bidirectional data flows, so you can just wait for the server to respond. It will send you a message when it’s available.&nbsp;
+The WebSocket communication protocol provides a full-duplex communication channel over a single TCP connection, which means that both the client and the server can send data whenever they need, without any sort of request, even at the same time.&nbsp;
 
 WebSockets are a good solution for services that require continuous data exchange – for instance, instant messengers, online games, and real-time trading systems. You can find complete information about the WebSocket protocol in the[ RFC 6455 specification](https://tools.ietf.org/html/rfc6455). &nbsp;
 
 WebSocket connections are requested by browsers and are responded to by servers, after which a connection is established. This process is often called a [handshake](https://en.wikipedia.org/wiki/Handshaking). The special kind of header in WebSockets requires only one handshake between a browser and server for establishing a connection that will remain active throughout its lifetime.&nbsp;
+
+Websocket protocol uses port 80 for unsecure connection and port 443 for secure connection, respectively,  specification defines ws (WebSocket) and wss (WebSocket Secure) uniform resource identifier schemes.&nbsp;
 
 WebSockets solve many of the headaches of&nbsp;real-time web&nbsp;development&nbsp;and have several benefits over traditional HTTP:
 
