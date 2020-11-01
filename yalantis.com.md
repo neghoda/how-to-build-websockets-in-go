@@ -10,9 +10,9 @@ Getting started with WebSockets in go, let’s draw the line between network soc
 ### Network socket&nbsp;
 A network socket, or simply a socket, serves as an internal endpoint for exchanging data between applications running on the same computer or on different computers on the same network.&nbsp;
 
-Sockets are a key part of Unix and Windows-based operating systems, and they make it easier for developers to create network-enabled software. Instead of constructing network connections from scratch, app developers can include sockets in their programs. Since network sockets are used for a number of different network protocols (HTTP, FTP, etc.), several sockets can be used simultaneously.
+Sockets are a key part of Unix and Windows-based operating systems, and they make it easier for developers to create network-enabled software. Instead of constructing network connections from scratch, app developers can include sockets in their programs. Since network sockets are used for several network protocols (HTTP, FTP, etc.), multiple sockets can be used simultaneously.
 
-Sockets are created and used with a set of function calls, which are sometimes referred to as a socket’s application programming interface ([API](https://searchapparchitecture.techtarget.com/definition/application-program-interface-API)). Thanks to function calls, sockets can be opened just like regular files.&nbsp;
+Sockets are created and used with a set of function calls, defined by sockets application programming interface ([API](https://searchapparchitecture.techtarget.com/definition/application-program-interface-API)).&nbsp;
 
 There are several types of network sockets:
 
@@ -24,11 +24,9 @@ There are several types of network sockets:
 
 **Socket communication&nbsp;**
 
-First, let’s figure out how to ensure that every socket is unique. If they’re not, you can’t establish a reliable communication channel.&nbsp;
+Each network socket identified by address, which is a triad of a transport protocol, IP address, and port number.&nbsp;
 
-Giving every process a unique PID helps to deal with the problem locally. But such an approach doesn’t work over a network. To create a unique socket, we recommend using the TCP/IP protocol. With TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among host applications.
-
-TCP and UDP are two major protocols for communicating between hosts. Let’s see how your app can connect to TCP and UDP sockets.&nbsp;
+TCP and UDP are two major protocols for communicating between hosts.  Let’s see how your app can connect to TCP and UDP sockets.&nbsp;
 
 - **Connecting to a TCP socket**
 
